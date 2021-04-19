@@ -7,7 +7,11 @@
 int dot(int x[], int y[], int dim) {
   int vproduct = 0;
   for(int i=0;i<dim;i++){
+<<<<<<< HEAD
     vproduct += x[i] * y[i];
+=======
+    vproduct = vproduct + x[i] * y[i];
+>>>>>>> 583ec32b05bae0f6d6b479ef21407944c4c2df0e
   }
   return vproduct;
 }
