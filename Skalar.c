@@ -6,7 +6,7 @@
 int dot(int x[], int y[], int dim) {
   int vproduct = 0;
   for(int i=0;i<dim;i++){
-    product = vproduct + x[i] * y[i];
+    int product = vproduct + x[i] * y[i];
   }
   return vproduct;
 }
@@ -26,7 +26,7 @@ int main(void) {
   y[0] = 5;
   y[1] = 2;
 
-  lsg = dot(x,y,dim);
+  int lsg = dot(x,y,dim);
 
   printf("Das Skalarprodukt beträgt: %s\n", lsg);
 
