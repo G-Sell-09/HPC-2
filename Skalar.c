@@ -1,6 +1,7 @@
 // Hier wird jetzt programmiert
 
 #include <stdio.h>
+#include <stdlib.h>
 
 // Funktion zur Berechnung des Skalarprodukts
 int dot(int x[], int y[], int dim) {
