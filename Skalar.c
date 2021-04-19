@@ -28,7 +28,7 @@ int main(void) {
 
   int lsg = dot(x,y,dim);
 
-  printf("Das Skalarprodukt beträgt: %s\n", lsg);
+  printf("Das Skalarprodukt beträgt: %d\n", lsg);
 
   return 0;
 }
