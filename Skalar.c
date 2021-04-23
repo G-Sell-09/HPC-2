@@ -1,9 +1,19 @@
-// Hier wird jetzt programmiert
+/*!
+Skript zum berechnen des Skalarprodukts zweier Vektoren.
 
+\brief Skalarprodukt
+
+\author Robin Sell, 6071120
+\author Neil Vetter, 6021336
+
+\version 1.0
+
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
 // Funktion zur Berechnung des Skalarprodukts
+/// Funktion die das Skalrprodukt berechnet
 int dot(int x[], int y[], int dim) {
   int vproduct = 0;
   for(int i=0;i<dim;i++){
@@ -13,7 +23,8 @@ int dot(int x[], int y[], int dim) {
 }
 
 // Hauptroutine
-//int main(int argc, char **argv[]) {
+
+/// Main
 int main(void) {
 
   // int dim = atoi(argv[1]);
