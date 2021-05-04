@@ -23,6 +23,7 @@ void var1(int N)
     for(int j=0;j<N;j++)
     {
       printf("Fehler1\n");
+      printf("a-Wert %f\n", &a);
       a[i]=a[i]+b[i][j]*x[j];
       printf("Fehler2\n");
     }
