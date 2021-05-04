@@ -13,27 +13,38 @@ double getTimeStamp()
 }
 
 //Variante1
-void var1(int a, int b, int x, int N) {
-  double ∗a, ∗x;
-  double ∗∗b;
-  for(int i=0;i<N;i++){
-    for(int j=0;j<N;j++){
-      a[i]=a[i]+b[i][j]∗x[j];
+void var1(int N)
+{
+  double *a, *x;
+  double **b;
+
+  for(int i=0;i<N;i++)
+  {
+    for(int j=0;j<N;j++)
+    {
+      printf("Fehler1\n");
+      a[i]=a[i]+b[i][j]*x[j];
+      printf("Fehler2\n");
     }
   }
 }
 
 //Variante2
-void var2(int a, int b, int x, int N) {
-  double ∗a, ∗b_val, ∗b_col, ∗b_row_ptr, ∗x;
-  for(int i=0;i<N;i++){
-    for(int j = b_row_ptr[i],j < b_row_ptr[i+1], j++){
-      a[i] = a[i] + b_val[j] ∗ x[b_col[j]];
-    }
-  }
-}
 
-int main(int argc, char const *argv[]) {
+// void var2(int N)
+// {
+//   double *a, *b_val, *b_col, *b_row_ptr, *x;
+//   for(int i=0;i<N;i++)
+//   {
+//     for(int j=b_row_ptr[i]; j< b_row_ptr[i+1]; j++)
+//     {
+//       a[i] = a[i] + b_val[j] * x[b_col[j]];
+//     }
+//   }
+// }
+
+int main(int argc, char const *argv[])
+{
   if( argc < 2 )
 	{
 		printf("Nicht genuegend Eingabeparameter.\n");
@@ -42,27 +53,46 @@ int main(int argc, char const *argv[]) {
 
   int N = atoi(argv[1]);
   int count = N*N;
+  //double *a = malloc((N)*sizeof(double));
+  //double *x = malloc((N)*sizeof(double));
+  //double **b = malloc((N)*(N)*sizeof(double));
+  double *array_1 = malloc((N)*sizeof(double));
+  double wert;
 
-  for (i = 0; i < count; i++);
+  for (int i = 0; i < count; i++)
   {
-    double wert = rand()%count;
-    double array_1 = wert;
+    wert = rand()%count;
+    array_1[i] = wert;
+    printf("Wert: %f\n", array_1[i]);
   }
-  for (int i = 0; i < N; i++) {
-    for (int j = 0; j < N; j++) {
-      int a[i][j] = wert[i*j+j];
+  printf("Hallo \n");
+  for (int i=0; i<N; i++)
+  {
+    for (int j=0; j<N; j++)
+    {
+      double b[N][N];
+      b[i][j] = array_1[i+j];
+      printf("b-Wert %f\n", b[i][j]);
     }
   }
-  for (int i = 0; i < N; i++) {
-    int b[i] = wert[i];
-    int x[i] = wert[i]/2*3*wert[i+1];
-}
+  for (int i = 0; i < N; i++)
+  {
+    double a[N];
+    double x[N];
+    a[i] = array_1[i];
+    x[i] = array_1[i]/2*3*array_1[i+1];
+    printf("a-Wert %f\n", a[i]);
+    printf("x-Wert %f\n", x[i]);
+  }
   double A,B,C,D;
   A = getTimeStamp();
-  var1(a,b,N);
+  var1(N);
   B = getTimeStamp();
-  C = getTimeStamp();
-  var2(a,b,N);
+  //var2(N);
   D = getTimeStamp();
+
+  printf("\n Rechenzeit Var 1: %lf \n", B-A );
+  printf("\n Rechenzeit Var 2:%lf \n", C-B );
+
   return 0;
 }
