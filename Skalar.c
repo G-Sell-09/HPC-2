@@ -11,6 +11,7 @@ Skript zum berechnen des Skalarprodukts zweier Vektoren.
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <
 
 // Funktion zur Berechnung des Skalarprodukts
 /// Funktion die das Skalrprodukt berechnet
