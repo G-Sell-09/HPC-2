@@ -28,9 +28,18 @@ int main(int argc, char const *argv[])
   //double *a = malloc((N)*sizeof(double));
   //double *x = malloc((N)*sizeof(double));
   //const double **b = malloc((N)*(N)*sizeof(double));
-  double **M = malloc(N*N*sizeof(double));
-  double *x = malloc(N*sizeof(double));
-  double *b = malloc(N*sizeof(double));
+  double **M;
+  double *x;
+  double *b;
+
+  M  = malloc(N*sizeof(double));
+  x =  malloc(N*sizeof(double));
+  b =  malloc(N*sizeof(double));
+
+  for (int i = 0; i < N; i++)
+  {
+    M[i] = (double*) malloc (N*sizeof(double));
+  }
 
 
   LIKWID_MARKER_INIT;
@@ -40,9 +49,9 @@ int main(int argc, char const *argv[])
   {
     for (int j=0; j<N; j++)
     {
-      M[i][j] = i/j;
+      M[i][j] = (double)i / (double)j;
     }
-    x[i] = i;
+    x[i] = (double)i;
   }
 
   double A,B;
@@ -62,6 +71,7 @@ int main(int argc, char const *argv[])
   }
   LIKWID_MARKER_STOP("MatVec");
   }
+
   B = getTimeStamp();
 
 
