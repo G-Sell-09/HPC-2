@@ -54,10 +54,23 @@ int main(int argc, char const *argv[])
 
   int N = atoi(argv[1]);
   int count = N*N;
-  //double *a = malloc((N)*sizeof(double));
-  //double *x = malloc((N)*sizeof(double));
-  //double **b = malloc((N)*(N)*sizeof(double));
-  double *array_1 = malloc((N)*sizeof(double));
+
+  double **b;
+  double *a;
+  double *x;
+  double *array_1;
+
+  double a = malloc((N)*sizeof(double));
+  double x = malloc((N)*sizeof(double));
+  double b = malloc((N)*sizeof(double));
+
+  for (int i = 0; i < N; i++)
+  {
+    b[i] = (double*) malloc (N*sizeof(double));
+  }
+
+
+  array_1 = malloc((N)*sizeof(double));
   double wert;
 
   for (int i = 0; i < count; i++)
@@ -71,15 +84,12 @@ int main(int argc, char const *argv[])
   {
     for (int j=0; j<N; j++)
     {
-      double b[N][N];
       b[i][j] = array_1[i+j];
       printf("b-Wert %f\n", b[i][j]);
     }
   }
   for (int i = 0; i < N; i++)
   {
-    double a[N];
-    double x[N];
     a[i] = array_1[i];
     x[i] = array_1[i]/2*3*array_1[i+1];
     printf("a-Wert %f\n", a[i]);
