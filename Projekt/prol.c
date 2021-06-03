@@ -5,9 +5,6 @@ void prol(int N, double* v_2h, double* v_h)
   // New bigger grid size
   int NN = 2*N+1
 
-  // New grid values in bigger vector
-  double v_h = malloc(NN*NN*sizeof(double));
-
   // Boundary values
   // double bound = 0;
 
