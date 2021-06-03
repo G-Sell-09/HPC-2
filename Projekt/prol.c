@@ -1,5 +1,5 @@
 
-void prol(int N, double* v_2h)
+void prol(int N, double* v_2h, double* v_h)
 {
 
   // New bigger grid size
@@ -63,11 +63,11 @@ void prol(int N, double* v_2h)
   for (int i = 1; i < N; i++) {
 
     // Punkte unten am Rand
-    v_h[(2*i)]              = 0.25 * (v_2h[i-1] + v_2h[i]);
+    v_h[(2*i)]            = 0.25 * (v_2h[i-1] + v_2h[i]);
     // Punkte links am Rand
-    v_h[2*i*NN]          = 0.25 * (v_2h[(i-1)*N] + v_2h[i*N];
+    v_h[2*i*NN]           = 0.25 * (v_2h[(i-1)*N] + v_2h[i*N];
     // Punkte rechts am Rand
-    v_h[(2*NN*i)-1 + NN]    = 0.25 * (v_2h[(N-1) + (i-1)*N] + v_2h[(N-1) + (i)*N]);
+    v_h[(2*NN*i)-1 + NN]  = 0.25 * (v_2h[(N-1) + (i-1)*N] + v_2h[(N-1) + (i)*N]);
     // Punkte oben am Rand
     v_h[NN*(NN-1) + 2*i]  = 0.25 * (v_2h[(N*(N-1)) + (i-1)] + v_2h[(N*(N-1)) + (i)];
 
