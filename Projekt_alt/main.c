@@ -14,7 +14,7 @@ double u(double x, double y)
 
 void duplicate(double* x, double * y, int N)
 {
-  for (int i = 0; i < N; i++  )
+  for (int i = 0; i < N*N; i++  )
   {
     y[i] = x[i];
   }
@@ -33,34 +33,18 @@ int main (int argc , char **argv)
   }
 
   int N = atoi(argv[1]);
-  int L = atoi(argv[2]); // Give 0 if L shall be calculated
+  int L = atoi(argv[2]);
 
   int maxIter = 500;
   int step = 0;
   int i,j;
-  int nu1,nu2;
-
-  nu1 = 5;
-  nu2 = 5;
 
   double tol = 1.e-8;
 
-  //Berechne L anhand Größe der Matrix
-  int N_help = N;
   if (L == 0)
   {
-    for (i = 0; i < 100; i++  )
-    {
-      if (N_help > 100)
-      {
-        L += 1;
-        N_help = (N-1)/2;
-      }
-      else
-      break;
-    }
+    //Berechne L anhand Größe der Matrix
   }
-
   double h  = 1./(double)(N+1);
 
   double *x = malloc(N*N*sizeof(double));
@@ -91,8 +75,8 @@ int main (int argc , char **argv)
 
     duplicate(x, x0);
 
-    v_cycle(N*N,b,x,L,nu1,nu2);
-
+    v_cycle(N,b,x,L,nu1,nu2);
+    
     if (N<1000){
       e_iter[i] = norm2(vec2(x_sol,x,1,N)) / norm2(x);
     }
@@ -104,4 +88,11 @@ int main (int argc , char **argv)
       break
     }
   }
+
+
+
+
+
+
+
 }
