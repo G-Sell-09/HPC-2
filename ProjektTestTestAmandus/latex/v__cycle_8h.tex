@@ -1,0 +1,92 @@
+\hypertarget{v__cycle_8h}{}\doxysection{v\+\_\+cycle.\+h File Reference}
+\label{v__cycle_8h}\index{v\_cycle.h@{v\_cycle.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{v__cycle_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{v__cycle_8h_ac02ac948524a2ec22da26b88ba062378}{v\+\_\+cycle}} (double $\ast$$\ast$Arr\+Ofx, double $\ast$$\ast$Arr\+Ofb, double $\ast$$\ast$Arr\+Ofr, int L, int L\+\_\+temp, double nu1, double nu2, double w, double tol\+Smoo, int $\ast$N\+\_\+vec, int $\ast$N\+\_\+pot, double $\ast$$\ast$lower, double $\ast$$\ast$upper, \mbox{\hyperlink{functions_8h_a575a41eb262bae5c9088878d75df500b}{my\+Smoother}} smooth, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}} mf\+Mult)
+\begin{DoxyCompactList}\small\item\em Performs a recursive multigrid method with pre-\/ and post-\/smoothing using the v\+\_\+cycle procedure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{v__cycle_8h_ac02ac948524a2ec22da26b88ba062378}\label{v__cycle_8h_ac02ac948524a2ec22da26b88ba062378}} 
+\index{v\_cycle.h@{v\_cycle.h}!v\_cycle@{v\_cycle}}
+\index{v\_cycle@{v\_cycle}!v\_cycle.h@{v\_cycle.h}}
+\doxysubsubsection{\texorpdfstring{v\_cycle()}{v\_cycle()}}
+{\footnotesize\ttfamily void v\+\_\+cycle (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{Arr\+Ofx,  }\item[{double $\ast$$\ast$}]{Arr\+Ofb,  }\item[{double $\ast$$\ast$}]{Arr\+Ofr,  }\item[{int}]{L,  }\item[{int}]{L\+\_\+temp,  }\item[{double}]{nu1,  }\item[{double}]{nu2,  }\item[{double}]{w,  }\item[{double}]{tol\+Smoo,  }\item[{int $\ast$}]{N\+\_\+vec,  }\item[{int $\ast$}]{N\+\_\+pot,  }\item[{double $\ast$$\ast$}]{lower,  }\item[{double $\ast$$\ast$}]{upper,  }\item[{\mbox{\hyperlink{functions_8h_a575a41eb262bae5c9088878d75df500b}{my\+Smoother}}}]{smooth,  }\item[{\mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}}}]{mf\+Mult }\end{DoxyParamCaption})}
+
+
+
+Performs a recursive multigrid method with pre-\/ and post-\/smoothing using the v\+\_\+cycle procedure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em N} & grid size \\
+\hline
+\mbox{\texttt{ in}}  & {\em Arr\+Ofx} & matrix with enough space to store x on all levels \\
+\hline
+\mbox{\texttt{ in}}  & {\em Arr\+Ofb} & matrix with enough space to store right hand sides on all levels \\
+\hline
+\mbox{\texttt{ in}}  & {\em Arr\+Ofr} & matrix with enough space to store residuals on all levels \\
+\hline
+\mbox{\texttt{ in}}  & {\em L} & \# of levels for multigrid method \\
+\hline
+\mbox{\texttt{ in}}  & {\em L\+\_\+temp} & current level for rekursive call \\
+\hline
+\mbox{\texttt{ in}}  & {\em nu1} & number of iteration in the pre-\/smoothing operator \\
+\hline
+\mbox{\texttt{ in}}  & {\em nu2} & number of iteration in the post-\/smoothing operator \\
+\hline
+\mbox{\texttt{ in}}  & {\em w} & relaxation factor for smoothing operator \\
+\hline
+\mbox{\texttt{ in}}  & {\em tol\+Smoo} & tolerance for the smoothing operator \\
+\hline
+\mbox{\texttt{ in}}  & {\em N\+\_\+vec} & array with values of N on each level \\
+\hline
+\mbox{\texttt{ in}}  & {\em N\+\_\+pot} & array with values of N squared on each level \\
+\hline
+\mbox{\texttt{ in}}  & {\em lower} & matrix L for the LU decomposition \\
+\hline
+\mbox{\texttt{ in}}  & {\em upper} & matrix U for the LU decomposition \\
+\hline
+\mbox{\texttt{ in}}  & {\em smooth} & typedef that points to the chosen smoothing operator \\
+\hline
+\mbox{\texttt{ in}}  & {\em mf\+Mult} & typedef that points to the chosen matrixfree mat-\/vec multiplication\\
+\hline
+\mbox{\texttt{ out}}  & {\em Arr\+Ofx} & matrix with enough space to store x on all levels \\
+\hline
+\mbox{\texttt{ out}}  & {\em Arr\+Ofr} & matrix with enough space to store residuals on all levels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{v__cycle_8h_ac02ac948524a2ec22da26b88ba062378_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{v__cycle_8h_ac02ac948524a2ec22da26b88ba062378_icgraph}
+\end{center}
+\end{figure}

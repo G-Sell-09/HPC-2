@@ -1,0 +1,4 @@
+<map id="residual" name="residual">
+<area shape="rect" id="node1" title="calculates residual of Ax&#45;b for given matrixfree mat&#45;vec multiplication" alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="$functions_8h.html#afb2569f43ba282c49ec37dc69c4be077" title="a = b + ska * c" alt="" coords="128,5,181,32"/>
+</map>

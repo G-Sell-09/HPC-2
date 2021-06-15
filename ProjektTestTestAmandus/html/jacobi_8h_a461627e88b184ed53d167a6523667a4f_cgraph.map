@@ -1,0 +1,8 @@
+<map id="jac5" name="jac5">
+<area shape="rect" id="node1" title="jacobi smoother for the 5&#45;point stencil" alt="" coords="5,56,55,83"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a3080a9370694f7282f3ee1fb350c9fe1" title="2&#45;norm of a vector x" alt="" coords="108,5,172,32"/>
+<area shape="rect" id="node4" href="$functions_8h.html#aa1cedc577fcd89781cfd04cc225b8eb7" title="calculates residual of Ax&#45;b for given matrixfree mat&#45;vec multiplication" alt="" coords="103,56,177,83"/>
+<area shape="rect" id="node6" href="$functions_8h.html#ac65eeff05a547f39022de2f560a1ba34" title="a = a + ska * b" alt="" coords="113,107,167,133"/>
+<area shape="rect" id="node3" href="$functions_8h.html#a8e8619055360840bbfe74ca2652b625e" title="skalarproduct = a * b" alt="" coords="231,5,273,32"/>
+<area shape="rect" id="node5" href="$functions_8h.html#afb2569f43ba282c49ec37dc69c4be077" title="a = b + ska * c" alt="" coords="225,56,279,83"/>
+</map>

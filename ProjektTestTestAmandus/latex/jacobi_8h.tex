@@ -1,0 +1,141 @@
+\hypertarget{jacobi_8h}{}\doxysection{jacobi.\+h File Reference}
+\label{jacobi_8h}\index{jacobi.h@{jacobi.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{jacobi_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{jacobi_8h_a461627e88b184ed53d167a6523667a4f}{jac5}} (double $\ast$x, double $\ast$b, double $\ast$r, double w, double nu, double tol, int N, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}} mf\+Mult)
+\begin{DoxyCompactList}\small\item\em jacobi smoother for the 5-\/point stencil \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jacobi_8h_a107ff2199a0bb71965adcbd2fb71d7e7}{jac9}} (double $\ast$x, double $\ast$b, double $\ast$r, double w, double nu, double tol, int N, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}} mf\+Mult)
+\begin{DoxyCompactList}\small\item\em jacobi smoother for the 9-\/point stencil \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jacobi_8h_a461627e88b184ed53d167a6523667a4f}\label{jacobi_8h_a461627e88b184ed53d167a6523667a4f}} 
+\index{jacobi.h@{jacobi.h}!jac5@{jac5}}
+\index{jac5@{jac5}!jacobi.h@{jacobi.h}}
+\doxysubsubsection{\texorpdfstring{jac5()}{jac5()}}
+{\footnotesize\ttfamily void jac5 (\begin{DoxyParamCaption}\item[{double $\ast$}]{x,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{r,  }\item[{double}]{w,  }\item[{double}]{nu,  }\item[{double}]{tol,  }\item[{int}]{N,  }\item[{\mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}}}]{mf\+Mult }\end{DoxyParamCaption})}
+
+
+
+jacobi smoother for the 5-\/point stencil 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & right hand side \\
+\hline
+\mbox{\texttt{ in}}  & {\em r} & residual \\
+\hline
+\mbox{\texttt{ in}}  & {\em w} & relaxation factor \\
+\hline
+\mbox{\texttt{ in}}  & {\em nu} & number of iterations \\
+\hline
+\mbox{\texttt{ in}}  & {\em tol} & tolerance \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & grid size \\
+\hline
+\mbox{\texttt{ in}}  & {\em mf\+Mult} & typdef my\+Mult for 5-\/point or 9-\/point stencil\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ out}}  & {\em b} & right hand side \\
+\hline
+\mbox{\texttt{ out}}  & {\em r} & residual\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{jacobi_8h_a461627e88b184ed53d167a6523667a4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{jacobi_8h_a461627e88b184ed53d167a6523667a4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{jacobi_8h_a107ff2199a0bb71965adcbd2fb71d7e7}\label{jacobi_8h_a107ff2199a0bb71965adcbd2fb71d7e7}} 
+\index{jacobi.h@{jacobi.h}!jac9@{jac9}}
+\index{jac9@{jac9}!jacobi.h@{jacobi.h}}
+\doxysubsubsection{\texorpdfstring{jac9()}{jac9()}}
+{\footnotesize\ttfamily void jac9 (\begin{DoxyParamCaption}\item[{double $\ast$}]{x,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{r,  }\item[{double}]{w,  }\item[{double}]{nu,  }\item[{double}]{tol,  }\item[{int}]{N,  }\item[{\mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}}}]{mf\+Mult }\end{DoxyParamCaption})}
+
+
+
+jacobi smoother for the 9-\/point stencil 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & right hand side \\
+\hline
+\mbox{\texttt{ in}}  & {\em r} & residual \\
+\hline
+\mbox{\texttt{ in}}  & {\em w} & relaxation factor \\
+\hline
+\mbox{\texttt{ in}}  & {\em nu} & number of iterations \\
+\hline
+\mbox{\texttt{ in}}  & {\em tol} & tolerance \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & grid size \\
+\hline
+\mbox{\texttt{ in}}  & {\em mf\+Mult} & typdef my\+Mult for 5-\/point or 9-\/point stencil\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ out}}  & {\em b} & right hand side \\
+\hline
+\mbox{\texttt{ out}}  & {\em r} & residual\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{jacobi_8h_a107ff2199a0bb71965adcbd2fb71d7e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{jacobi_8h_a107ff2199a0bb71965adcbd2fb71d7e7_icgraph}
+\end{center}
+\end{figure}

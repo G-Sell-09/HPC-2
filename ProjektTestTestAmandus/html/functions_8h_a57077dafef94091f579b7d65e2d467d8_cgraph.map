@@ -1,0 +1,5 @@
+<map id="initXB9" name="initXB9">
+<area shape="rect" id="node1" title="initialize starting values, right hand side and the analytical solution for 9&#45;point stencil" alt="" coords="5,31,75,57"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a5171488338932f60aa0e91441b310bea" title="f = 2*pi²*sin(x*y)*sin(x*y)" alt="" coords="123,5,161,32"/>
+<area shape="rect" id="node3" href="$functions_8h.html#afd2d63233a692dbc060217bcd05b2087" title="u = sin(x*y)*sin(x*y)" alt="" coords="123,56,161,83"/>
+</map>

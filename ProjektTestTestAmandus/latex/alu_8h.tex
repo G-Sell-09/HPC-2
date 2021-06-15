@@ -1,0 +1,115 @@
+\hypertarget{alu_8h}{}\doxysection{alu.\+h File Reference}
+\label{alu_8h}\index{alu.h@{alu.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{alu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{alu_8h_a49abaf2e2d7aa09cdbd164c27c450659}{init\+L\+U5}} (double $\ast$$\ast$A, double $\ast$$\ast$lower, double $\ast$$\ast$upper, int N\+\_\+vec, int N\+\_\+pot)
+\begin{DoxyCompactList}\small\item\em Calculates the 5-\/point poisson matrix for the roughest grid and its L\+U-\/decomposition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alu_8h_a795c7d4beb5dd7f30e051dd8deae8d9a}{init\+L\+U9}} (double $\ast$$\ast$A, double $\ast$$\ast$lower, double $\ast$$\ast$upper, int N\+\_\+vec, int N\+\_\+pot)
+\begin{DoxyCompactList}\small\item\em Calculates the 9-\/point poisson matrix for the roughest grid and its L\+U-\/decomposition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{alu_8h_a49abaf2e2d7aa09cdbd164c27c450659}\label{alu_8h_a49abaf2e2d7aa09cdbd164c27c450659}} 
+\index{alu.h@{alu.h}!initLU5@{initLU5}}
+\index{initLU5@{initLU5}!alu.h@{alu.h}}
+\doxysubsubsection{\texorpdfstring{initLU5()}{initLU5()}}
+{\footnotesize\ttfamily void init\+L\+U5 (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{A,  }\item[{double $\ast$$\ast$}]{lower,  }\item[{double $\ast$$\ast$}]{upper,  }\item[{int}]{N\+\_\+vec,  }\item[{int}]{N\+\_\+pot }\end{DoxyParamCaption})}
+
+
+
+Calculates the 5-\/point poisson matrix for the roughest grid and its L\+U-\/decomposition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em A} & matrix A \\
+\hline
+\mbox{\texttt{ in}}  & {\em lower} & matrix L \\
+\hline
+\mbox{\texttt{ in}}  & {\em upper} & matrix U \\
+\hline
+\mbox{\texttt{ in}}  & {\em N\+\_\+vec} & size of the grid in one dimension \\
+\hline
+\mbox{\texttt{ in}}  & {\em N\+\_\+pot} & size of the matrices in one dimension\\
+\hline
+\mbox{\texttt{ out}}  & {\em A} & poisson matrix \\
+\hline
+\mbox{\texttt{ out}}  & {\em lower} & lower triangle matrix from the L\+U-\/decomposition \\
+\hline
+\mbox{\texttt{ out}}  & {\em upper} & upper triangle matrix from the L\+U-\/decomposition\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{alu_8h_a49abaf2e2d7aa09cdbd164c27c450659_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{alu_8h_a795c7d4beb5dd7f30e051dd8deae8d9a}\label{alu_8h_a795c7d4beb5dd7f30e051dd8deae8d9a}} 
+\index{alu.h@{alu.h}!initLU9@{initLU9}}
+\index{initLU9@{initLU9}!alu.h@{alu.h}}
+\doxysubsubsection{\texorpdfstring{initLU9()}{initLU9()}}
+{\footnotesize\ttfamily void init\+L\+U9 (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{A,  }\item[{double $\ast$$\ast$}]{lower,  }\item[{double $\ast$$\ast$}]{upper,  }\item[{int}]{N\+\_\+vec,  }\item[{int}]{N\+\_\+pot }\end{DoxyParamCaption})}
+
+
+
+Calculates the 9-\/point poisson matrix for the roughest grid and its L\+U-\/decomposition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em A} & matrix A \\
+\hline
+\mbox{\texttt{ in}}  & {\em lower} & matrix L \\
+\hline
+\mbox{\texttt{ in}}  & {\em upper} & matrix U \\
+\hline
+\mbox{\texttt{ in}}  & {\em N\+\_\+vec} & size of the grid in one dimension \\
+\hline
+\mbox{\texttt{ in}}  & {\em N\+\_\+pot} & size of the matrices in one dimension\\
+\hline
+\mbox{\texttt{ out}}  & {\em A} & poisson matrix \\
+\hline
+\mbox{\texttt{ out}}  & {\em lower} & lower triangle matrix from the L\+U-\/decomposition \\
+\hline
+\mbox{\texttt{ out}}  & {\em upper} & upper triangle matrix from the L\+U-\/decomposition\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{alu_8h_a795c7d4beb5dd7f30e051dd8deae8d9a_icgraph}
+\end{center}
+\end{figure}
