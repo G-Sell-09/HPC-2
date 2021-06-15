@@ -24,44 +24,43 @@ void initLU5(double **A, double **lower,double **upper,int N_vec,int N_pot){
 
   // Insert the right values into the correspondix diagonales of the matrix A
   int i,j,k;
+
   for (int i = 0; i < N_pot; i++)
-     for (int j = 0; j < N_pot; j++)
-         A[i*N_vec+j] = 0;
+        for (int j = 0; j < N_pot; j++)
+            A[i][j] = 0;
 
 
-   // drei hauptdiagonalen
-   for (int i = 1; i < N_pot-1; i++)
-   {
-       A[i*N_vec+i-1] = -1;
-       A[i*N_vec+i] = 4;
-       A[i*N_vec+i+1] = -1;
-   }
-   // erste Zeile
-   A[0] = 4;
-   A[1] = -1;
-   // letzte Zeile
-   A[N_pot-2] = -1;
-   A[N_pot-1] = 4;
+    // drei hauptdiagonalen
+    for (int i = 1; i < N_pot-1; i++)
+    {
+        A[i][i-1] = -1;
+        A[i][i] = 4;
+        A[i][i+1] = -1;
+    }
+    // erste Zeile
+    A[0][0] = 4;
+    A[0][1] = -1;
+    // letzte Zeile
+    A[N_pot-1][N_pot-2] = -1;
+    A[N_pot-1][N_pot-1] = 4;
 
-   // ausseren Nebendiagonalen
-   for (int i = 0; i < N_pot-N_vec; i++)
-   {
-       A[ i*N_vec + i+N_vec] = -1; // rechts
-       A[ (i+N_vec)*N_vec + i-N_vec] = -1; // links
-   }
+    // ausseren Nebendiagonalen
+    for (int i = 0; i < N_pot-N_vec; i++)
+    {
+        A[i][i+N_vec] = -1; // rechts
+        A[i+N_vec][i-N_vec] = -1; // links
+    }
 
-   // Setting some values on the diagonales to 0 to get the correct Poisson-matrix
-   for (int k = 0; k < N_vec-1; k++){
-     // below the diagonal
-     A[N_vec+k*N_vec][N_vec-1+k*N_vec] = 0;
-     // above the diagonal
-     A[N_vec-1+k*N_vec][N_vec+k*N_vec] = 0;
-   }
 
-  #pragma omp parallel
-  {
+    // und dann ueberflussige entfernen
+    for (int i = N_vec; i < N_pot; i+=N_vec)
+    {
+        A[i][i-1] = 0;
+        A[(i-N_vec)][i+1] = 0;
+    }
+
+
     // Create L and U of the Poisson Matrix for the smallest grid
-    #pragma omp for nowait
     for(int j=0; j<N_pot; j++)
     {
       for(int i=0; i<N_pot; i++)
@@ -87,7 +86,6 @@ void initLU5(double **A, double **lower,double **upper,int N_vec,int N_pot){
         }
       }
     }
-  }
   printf("3");
 }
 
