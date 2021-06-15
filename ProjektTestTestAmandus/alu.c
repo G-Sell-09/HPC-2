@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include <omp.h>
+#include <time.h>
+#include <sched.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+
 /*!
  * \brief Calculates the 5-point poisson matrix for the roughest grid and its LU-decomposition
  *
@@ -20,45 +28,60 @@
 */
 void initLU5(double **A, double **lower,double **upper,int N_vec,int N_pot){
 
-  printf("1");
+  printf("BINNN DRIIIIIIIIIIIIIIN");
 
   // Insert the right values into the correspondix diagonales of the matrix A
   int i,j,k;
 
-  for (int i = 0; i < N_pot; i++)
-        for (int j = 0; j < N_pot; j++)
-            A[i][j] = 0;
+  // for (int i = 0; i < N_pot; i++)
+  //       for (int j = 0; j < N_pot; j++)
+  //           A[i][j] = 0;
 
 
     // drei hauptdiagonalen
-    for (int i = 1; i < N_pot-1; i++)
-    {
-        A[i][i-1] = -1;
-        A[i][i] = 4;
-        A[i][i+1] = -1;
-    }
-    // erste Zeile
-    A[0][0] = 4;
-    A[0][1] = -1;
-    // letzte Zeile
-    A[N_pot-1][N_pot-2] = -1;
-    A[N_pot-1][N_pot-1] = 4;
-
-    // ausseren Nebendiagonalen
-    for (int i = 0; i < N_pot-N_vec; i++)
-    {
-        A[i][i+N_vec] = -1; // rechts
-        A[i+N_vec][i-N_vec] = -1; // links
-    }
+    #pragma opm parallel
+      {
+      #pragma omp for nowait
+          for (int i = 0; i < N_pot; i++)
+              for (int j = 0; j < N_pot; j++)
+                  A[i][j] = 0;
 
 
-    // und dann ueberflussige entfernen
-    for (int i = N_vec; i < N_pot; i+=N_vec)
-    {
-        A[i][i-1] = 0;
-        A[(i-N_vec)][i+1] = 0;
-    }
+          // drei hauptdiagonalen
+      #pragma omp for nowait
+          for (int i = 1; i < N_pot-1; i++)
+          {
+              A[i][i-1] = -1;
+              A[i][i] = 4;
+              A[i][i+1] = -1;
+          }
+      #pragma omp single nowait
+          {
+          // erste Zeile
+          A[0][0] = 4;
+          A[0][1] = -1;
+          // letzte Zeile
+          A[N_pot-1][N_pot-2] = -1;
+          A[N_pot-1][N_pot-1] = 4;
+          }
+          // ausseren Nebendiagonalen
+      #pragma omp for nowait
+          for (int i = 0; i < N_pot-N_vec; i++)
+          {
+              A[i][i+N_vec] = -1; // rechts
+              A[i+N_vec][i-N_vec] = -1; // links
+          }
 
+      #pragma omp wait
+
+          // und dann ueberflussige entfernen
+      #pragma omp for
+          for (int i = N_vec; i < N_pot; i+=N_vec)
+          {
+              A[i][i-1] = 0;
+              A[(i-N_vec)][i+1] = 0;
+          }
+      }
 
     // Create L and U of the Poisson Matrix for the smallest grid
     for(int j=0; j<N_pot; j++)
@@ -86,7 +109,7 @@ void initLU5(double **A, double **lower,double **upper,int N_vec,int N_pot){
         }
       }
     }
-  printf("3");
+  printf("5");
 }
 
 //----------------------------------------------------------------------------------------
@@ -195,4 +218,45 @@ void initLU9(double **A, double **lower,double **upper,int N_vec,int N_pot){
       }
     }
   }
+}
+
+void main(){
+
+
+int N = 9;
+
+  double **A = (double**) malloc (N*N*sizeof(double*));
+  double **L = (double**) malloc (N*N*sizeof(double*));
+  double **U = (double**) malloc (N*N*sizeof(double*));
+
+  for (int i = 0; i < N*N; i++)
+  {
+      A[i] = (double*) malloc (N*N*sizeof(double));
+      L[i] = (double*) malloc (N*N*sizeof(double));
+      U[i] = (double*) malloc (N*N*sizeof(double));
+  }
+
+  initLU5(A, L,U,N,N*N);
+
+  for (int i = 0;i<N;i++){
+    for (int j = 0;j<N;j++){
+        printf("%f ", A[i][j]);
+    }
+    printf("\n");
+  }
+
+  for (int i = 0;i<N;i++){
+    for (int j = 0;j<N;j++){
+        printf("%f ", L[i][j]);
+    }
+    printf("\n");
+  }
+
+  for (int i = 0;i<N;i++){
+    for (int j = 0;j<N;j++){
+        printf("%f ", U[i][j]);
+    }
+    printf("\n");
+  }
+
 }
