@@ -28,14 +28,14 @@
 */
 void initLU5(double **A, double **lower,double **upper,int N_vec,int N_pot){
 
-  printf("BINNN DRIIIIIIIIIIIIIIN");
+  printf("BINNN DRIIIIIIIIIIIIIIN\n");
 
   // Insert the right values into the correspondix diagonales of the matrix A
   int i,j,k;
 
-  // for (int i = 0; i < N_pot; i++)
-  //       for (int j = 0; j < N_pot; j++)
-  //           A[i][j] = 0;
+  for (int i = 0; i < N_pot; i++)
+        for (int j = 0; j < N_pot; j++)
+            A[i][j] = 0;
 
 
     // drei hauptdiagonalen
@@ -244,6 +244,7 @@ int N = 9;
     }
     printf("\n");
   }
+  printf("\n");printf("\n");printf("\n");printf("\n");
 
   for (int i = 0;i<N;i++){
     for (int j = 0;j<N;j++){
@@ -251,6 +252,7 @@ int N = 9;
     }
     printf("\n");
   }
+  printf("\n");printf("\n");printf("\n");printf("\n");
 
   for (int i = 0;i<N;i++){
     for (int j = 0;j<N;j++){
