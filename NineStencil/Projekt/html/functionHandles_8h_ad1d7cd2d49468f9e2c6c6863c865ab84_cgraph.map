@@ -1,0 +1,5 @@
+<map id="initLUHandle" name="initLUHandle">
+<area shape="rect" id="node1" title="Picks a function handle to initialize the correct LU decomposition." alt="" coords="5,31,112,57"/>
+<area shape="rect" id="node2" href="$alu_8h.html#a49abaf2e2d7aa09cdbd164c27c450659" title="Calculates the 5&#45;point poisson matrix for the roughest grid and its LU&#45;decomposition." alt="" coords="160,5,228,32"/>
+<area shape="rect" id="node3" href="$alu_8h.html#a795c7d4beb5dd7f30e051dd8deae8d9a" title="Calculates the 9&#45;point poisson matrix for the roughest grid and its LU&#45;decomposition." alt="" coords="160,56,228,83"/>
+</map>

@@ -1,0 +1,26 @@
+var functions_8h =
+[
+    [ "myCycle", "functions_8h.html#aa532412408cc42ff243a8a8db17402ad", null ],
+    [ "myInitLU", "functions_8h.html#a09eb608bf20d7cfff2f1d67a035fcdab", null ],
+    [ "myInitXB", "functions_8h.html#a5e8e21d54aaf91ab30a829c841f15023", null ],
+    [ "myMult", "functions_8h.html#aaac0b5b1deae188098f9bcd2f5d4b005", null ],
+    [ "mySmoother", "functions_8h.html#a575a41eb262bae5c9088878d75df500b", null ],
+    [ "calculateL", "functions_8h.html#a384ae1c82028e6db525ddf71ce139800", null ],
+    [ "dot", "functions_8h.html#a8e8619055360840bbfe74ca2652b625e", null ],
+    [ "duplicate", "functions_8h.html#a549642aa73f9a9dc73b9bbddb7098f7f", null ],
+    [ "f", "functions_8h.html#a5171488338932f60aa0e91441b310bea", null ],
+    [ "getTimeStamp", "functions_8h.html#ab01f25e9d4ea3af4aaae53a6524e1229", null ],
+    [ "initial_val", "functions_8h.html#a4a4e13c878a42261e5ed3dfc55ead57e", null ],
+    [ "initN", "functions_8h.html#af65aece55efbd95595403e3aeee25e54", null ],
+    [ "initXB5", "functions_8h.html#aaf104f06bebf3e0cb4c5012304f6548d", null ],
+    [ "initXB9", "functions_8h.html#a57077dafef94091f579b7d65e2d467d8", null ],
+    [ "inputs", "functions_8h.html#af7314a0be1fea6466f56e40001b77b88", null ],
+    [ "min", "functions_8h.html#a2f8edc4561e9744ed4233b205fa7ec32", null ],
+    [ "norm2", "functions_8h.html#a3080a9370694f7282f3ee1fb350c9fe1", null ],
+    [ "residual", "functions_8h.html#aa1cedc577fcd89781cfd04cc225b8eb7", null ],
+    [ "u", "functions_8h.html#afd2d63233a692dbc060217bcd05b2087", null ],
+    [ "vec1", "functions_8h.html#afb2569f43ba282c49ec37dc69c4be077", null ],
+    [ "vec2", "functions_8h.html#ac65eeff05a547f39022de2f560a1ba34", null ],
+    [ "vec3", "functions_8h.html#a2e62c650b3b0e661bf37b78ee33249cb", null ],
+    [ "zeroes", "functions_8h.html#a3463aafa26ecb571158a2f7b9d897a24", null ]
+];

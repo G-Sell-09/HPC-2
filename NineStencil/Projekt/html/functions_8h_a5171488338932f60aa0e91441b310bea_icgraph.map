@@ -1,0 +1,7 @@
+<map id="f" name="f">
+<area shape="rect" id="node1" title="f = 2*pi²*sin(x*y)*sin(x*y)" alt="" coords="380,31,419,57"/>
+<area shape="rect" id="node2" href="$functions_8h.html#aaf104f06bebf3e0cb4c5012304f6548d" title="initialize starting values, right hand side and the analytical solution for 5&#45;point stencil" alt="" coords="263,5,332,32"/>
+<area shape="rect" id="node5" href="$functions_8h.html#a57077dafef94091f579b7d65e2d467d8" title="initialize starting values, right hand side and the analytical solution for 9&#45;point stencil" alt="" coords="263,56,332,83"/>
+<area shape="rect" id="node3" href="$functionHandles_8h.html#a9a1395358a8d908ac70adeea5a0b36ce" title="Given a stencil picks the correct methode to initialize the right side and initial values." alt="" coords="108,31,215,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Recursive multigrid method with pre&#45; and post&#45;smoothing." alt="" coords="5,31,60,57"/>
+</map>

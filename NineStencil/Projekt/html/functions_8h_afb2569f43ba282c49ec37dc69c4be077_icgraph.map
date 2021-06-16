@@ -1,0 +1,10 @@
+<map id="vec1" name="vec1">
+<area shape="rect" id="node1" title="a = b + ska * c" alt="" coords="495,81,548,108"/>
+<area shape="rect" id="node2" href="$functions_8h.html#aa1cedc577fcd89781cfd04cc225b8eb7" title="calculates residual of Ax&#45;b for given matrixfree mat&#45;vec multiplication" alt="" coords="372,81,447,108"/>
+<area shape="rect" id="node3" href="$jacobi_8h.html#a461627e88b184ed53d167a6523667a4f" title="jacobi smoother for the 5&#45;point stencil" alt="" coords="274,5,323,32"/>
+<area shape="rect" id="node6" href="$jacobi_8h.html#a107ff2199a0bb71965adcbd2fb71d7e7" title="jacobi smoother for the 9&#45;point stencil" alt="" coords="274,56,323,83"/>
+<area shape="rect" id="node7" href="$sor_8h.html#a9a3783c4b1894ab9952f87de6e8477a1" title=" " alt="" coords="273,107,324,133"/>
+<area shape="rect" id="node8" href="$sor_8h.html#abe60e0ab2bfa88f40a27de78306d3f5f" title=" " alt="" coords="273,157,324,184"/>
+<area shape="rect" id="node4" href="$functionHandles_8h.html#af3d14d00733c73525f4e3076ae219563" title="Picks the correct smoothing operator for chosen stencil and initializes the relaxation factor." alt="" coords="108,81,225,108"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Recursive multigrid method with pre&#45; and post&#45;smoothing." alt="" coords="5,81,60,108"/>
+</map>

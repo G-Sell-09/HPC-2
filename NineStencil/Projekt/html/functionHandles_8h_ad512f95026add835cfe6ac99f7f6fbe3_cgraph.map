@@ -1,0 +1,5 @@
+<map id="multHandle" name="multHandle">
+<area shape="rect" id="node1" title="Picks the correct function handle for, matrix&#45;free Mat&#45;Vector multiplication to a given stencil." alt="" coords="5,31,104,57"/>
+<area shape="rect" id="node2" href="$stencils_8h.html#a57ad5ef936cf43c7843d1955fd862371" title="Matrixfree matrix&#45;vector multiplication with the Poisson Matrix of the 5 point stencil." alt="" coords="152,5,229,32"/>
+<area shape="rect" id="node3" href="$stencils_8h.html#a73f1376081d41083fec1282a41231cb9" title="Matrixfree matrix&#45;vector multiplication with the Poisson Matrix of the 9 point stencil." alt="" coords="152,56,229,83"/>
+</map>
