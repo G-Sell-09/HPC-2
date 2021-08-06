@@ -1,0 +1,655 @@
+\hypertarget{functions_8h}{}\doxysection{functions.\+h File Reference}
+\label{functions_8h}\index{functions.h@{functions.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{functions_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}}) (double $\ast$, double $\ast$, int)
+\begin{DoxyCompactList}\small\item\em typedef function handle for choice of matrixfree mat-\/vec multiplication \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{functions_8h_a575a41eb262bae5c9088878d75df500b}{my\+Smoother}}) (double $\ast$, double $\ast$, double $\ast$, double, double, double, int, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}})
+\begin{DoxyCompactList}\small\item\em typedef function handle for choice of smoothing operator \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{functions_8h_a09eb608bf20d7cfff2f1d67a035fcdab}{my\+Init\+LU}}) (double $\ast$$\ast$, double $\ast$$\ast$, double $\ast$$\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em typedef function handle for choice of LU decomposition \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{functions_8h_aa532412408cc42ff243a8a8db17402ad}{my\+Cycle}}) (double $\ast$$\ast$, double $\ast$$\ast$, double $\ast$$\ast$, int, int, double, double, double, double, int $\ast$, int $\ast$, double $\ast$$\ast$, double $\ast$$\ast$, \mbox{\hyperlink{functions_8h_a575a41eb262bae5c9088878d75df500b}{my\+Smoother}}, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}})
+\begin{DoxyCompactList}\small\item\em typedef function handle for choice of cycle procedure \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{functions_8h_a5e8e21d54aaf91ab30a829c841f15023}{my\+Init\+XB}}) (double $\ast$, double $\ast$, double $\ast$, int, double)
+\begin{DoxyCompactList}\small\item\em typedef function handle for initilizing right side and initial values \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{functions_8h_a2f8edc4561e9744ed4233b205fa7ec32}{min}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em calculate the minimum of 2 values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_afb2569f43ba282c49ec37dc69c4be077}{vec1}} (double $\ast$restrict a, double $\ast$restrict b, double $\ast$restrict c, double ska, int N)
+\begin{DoxyCompactList}\small\item\em a = b + ska $\ast$ c \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_ac65eeff05a547f39022de2f560a1ba34}{vec2}} (double $\ast$restrict a, double $\ast$restrict b, double ska, int N)
+\begin{DoxyCompactList}\small\item\em a = a + ska $\ast$ b \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_a2e62c650b3b0e661bf37b78ee33249cb}{vec3}} (double $\ast$restrict a, double ska, int N)
+\begin{DoxyCompactList}\small\item\em a = ska $\ast$ a \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{functions_8h_a8e8619055360840bbfe74ca2652b625e}{dot}} (double $\ast$restrict x, double $\ast$restrict y, int N)
+\begin{DoxyCompactList}\small\item\em skalarproduct = a $\ast$ b \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{functions_8h_a3080a9370694f7282f3ee1fb350c9fe1}{norm2}} (double $\ast$restrict x, int N)
+\begin{DoxyCompactList}\small\item\em 2-\/norm of a vector x \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{functions_8h_a5171488338932f60aa0e91441b310bea}{f}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em f = 2$\ast$pi²$\ast$sin(x$\ast$y)$\ast$sin(x$\ast$y) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{functions_8h_afd2d63233a692dbc060217bcd05b2087}{u}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em u = sin(x$\ast$y)$\ast$sin(x$\ast$y) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{functions_8h_ab01f25e9d4ea3af4aaae53a6524e1229}{get\+Time\+Stamp}} ()
+\begin{DoxyCompactList}\small\item\em gives current time stamp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_aa1cedc577fcd89781cfd04cc225b8eb7}{residual}} (double $\ast$res, double $\ast$x, double $\ast$b, int N, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}} mf\+Mult)
+\begin{DoxyCompactList}\small\item\em calculates residual of Ax-\/b for given matrixfree mat-\/vec multiplication \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_a549642aa73f9a9dc73b9bbddb7098f7f}{duplicate}} (double $\ast$a, double $\ast$b, int N)
+\begin{DoxyCompactList}\small\item\em a = b duplication \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_a3463aafa26ecb571158a2f7b9d897a24}{zeroes}} (double $\ast$a, int N)
+\begin{DoxyCompactList}\small\item\em a = 0 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8h_a384ae1c82028e6db525ddf71ce139800}{calculateL}} (int N, int L)
+\begin{DoxyCompactList}\small\item\em calculates the Level L until grid \char`\"{}small enough\char`\"{} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8h_af65aece55efbd95595403e3aeee25e54}{initN}} (int $\ast$N\+\_\+vec, int $\ast$N\+\_\+pot, int L, int N)
+\begin{DoxyCompactList}\small\item\em calculates the grid size for each level L \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{functions_8h_a4a4e13c878a42261e5ed3dfc55ead57e}{initial\+\_\+val}} (double x, double y, int k, int l, double h)
+\begin{DoxyCompactList}\small\item\em x = sin(k$\ast$pi$\ast$x$\ast$h)$\ast$sin(l$\ast$pi$\ast$y$\ast$h) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_aaf104f06bebf3e0cb4c5012304f6548d}{init\+X\+B5}} (double $\ast$x, double $\ast$x\+\_\+sol, double $\ast$b, int N, double h)
+\begin{DoxyCompactList}\small\item\em initialize starting values, right hand side and the analytical solution for 5-\/point stencil \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_a57077dafef94091f579b7d65e2d467d8}{init\+X\+B9}} (double $\ast$x, double $\ast$x\+\_\+sol, double $\ast$b, int N, double h)
+\begin{DoxyCompactList}\small\item\em initialize starting values, right hand side and the analytical solution for 9-\/point stencil \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8h_af7314a0be1fea6466f56e40001b77b88}{inputs}} (char $\ast$GL, int stencil, char $\ast$cyc)
+\begin{DoxyCompactList}\small\item\em checks inputs from main for incorrect parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{functions_8h_aa532412408cc42ff243a8a8db17402ad}\label{functions_8h_aa532412408cc42ff243a8a8db17402ad}} 
+\index{functions.h@{functions.h}!myCycle@{myCycle}}
+\index{myCycle@{myCycle}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{myCycle}{myCycle}}
+{\footnotesize\ttfamily typedef void($\ast$ my\+Cycle) (double $\ast$$\ast$, double $\ast$$\ast$, double $\ast$$\ast$, int, int, double, double, double, double, int $\ast$, int $\ast$, double $\ast$$\ast$, double $\ast$$\ast$, \mbox{\hyperlink{functions_8h_a575a41eb262bae5c9088878d75df500b}{my\+Smoother}}, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}})}
+
+
+
+typedef function handle for choice of cycle procedure 
+
+\mbox{\Hypertarget{functions_8h_a09eb608bf20d7cfff2f1d67a035fcdab}\label{functions_8h_a09eb608bf20d7cfff2f1d67a035fcdab}} 
+\index{functions.h@{functions.h}!myInitLU@{myInitLU}}
+\index{myInitLU@{myInitLU}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{myInitLU}{myInitLU}}
+{\footnotesize\ttfamily typedef void($\ast$ my\+Init\+LU) (double $\ast$$\ast$, double $\ast$$\ast$, double $\ast$$\ast$, int, int)}
+
+
+
+typedef function handle for choice of LU decomposition 
+
+\mbox{\Hypertarget{functions_8h_a5e8e21d54aaf91ab30a829c841f15023}\label{functions_8h_a5e8e21d54aaf91ab30a829c841f15023}} 
+\index{functions.h@{functions.h}!myInitXB@{myInitXB}}
+\index{myInitXB@{myInitXB}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{myInitXB}{myInitXB}}
+{\footnotesize\ttfamily typedef void($\ast$ my\+Init\+XB) (double $\ast$, double $\ast$, double $\ast$, int, double)}
+
+
+
+typedef function handle for initilizing right side and initial values 
+
+\mbox{\Hypertarget{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}\label{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}} 
+\index{functions.h@{functions.h}!myMult@{myMult}}
+\index{myMult@{myMult}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{myMult}{myMult}}
+{\footnotesize\ttfamily typedef void($\ast$ my\+Mult) (double $\ast$, double $\ast$, int)}
+
+
+
+typedef function handle for choice of matrixfree mat-\/vec multiplication 
+
+\mbox{\Hypertarget{functions_8h_a575a41eb262bae5c9088878d75df500b}\label{functions_8h_a575a41eb262bae5c9088878d75df500b}} 
+\index{functions.h@{functions.h}!mySmoother@{mySmoother}}
+\index{mySmoother@{mySmoother}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{mySmoother}{mySmoother}}
+{\footnotesize\ttfamily typedef void($\ast$ my\+Smoother) (double $\ast$, double $\ast$, double $\ast$, double, double, double, int, \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}})}
+
+
+
+typedef function handle for choice of smoothing operator 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{functions_8h_a384ae1c82028e6db525ddf71ce139800}\label{functions_8h_a384ae1c82028e6db525ddf71ce139800}} 
+\index{functions.h@{functions.h}!calculateL@{calculateL}}
+\index{calculateL@{calculateL}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{calculateL()}{calculateL()}}
+{\footnotesize\ttfamily int calculateL (\begin{DoxyParamCaption}\item[{int}]{N,  }\item[{int}]{L }\end{DoxyParamCaption})}
+
+
+
+calculates the Level L until grid \char`\"{}small enough\char`\"{} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em N} & vector size \\
+\hline
+\mbox{\texttt{ in}}  & {\em L} & level\\
+\hline
+\mbox{\texttt{ out}}  & {\em L} & level \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{functions_8h_a384ae1c82028e6db525ddf71ce139800_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a8e8619055360840bbfe74ca2652b625e}\label{functions_8h_a8e8619055360840bbfe74ca2652b625e}} 
+\index{functions.h@{functions.h}!dot@{dot}}
+\index{dot@{dot}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily double dot (\begin{DoxyParamCaption}\item[{double $\ast$restrict}]{x,  }\item[{double $\ast$restrict}]{y,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+skalarproduct = a $\ast$ b 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & vector a \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & vector b \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & size of the vectors\\
+\hline
+\mbox{\texttt{ out}}  & {\em a} & vector a \\
+\hline
+\end{DoxyParams}
+$<$ SkalarproduktHere is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a8e8619055360840bbfe74ca2652b625e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a549642aa73f9a9dc73b9bbddb7098f7f}\label{functions_8h_a549642aa73f9a9dc73b9bbddb7098f7f}} 
+\index{functions.h@{functions.h}!duplicate@{duplicate}}
+\index{duplicate@{duplicate}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{duplicate()}{duplicate()}}
+{\footnotesize\ttfamily void duplicate (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+a = b duplication 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & vector a \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & vector b \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & vector size\\
+\hline
+\mbox{\texttt{ out}}  & {\em a} & vector a \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a549642aa73f9a9dc73b9bbddb7098f7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a5171488338932f60aa0e91441b310bea}\label{functions_8h_a5171488338932f60aa0e91441b310bea}} 
+\index{functions.h@{functions.h}!f@{f}}
+\index{f@{f}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{f()}{f()}}
+{\footnotesize\ttfamily double f (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+f = 2$\ast$pi²$\ast$sin(x$\ast$y)$\ast$sin(x$\ast$y) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & vector y\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & vector x \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a5171488338932f60aa0e91441b310bea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_ab01f25e9d4ea3af4aaae53a6524e1229}\label{functions_8h_ab01f25e9d4ea3af4aaae53a6524e1229}} 
+\index{functions.h@{functions.h}!getTimeStamp@{getTimeStamp}}
+\index{getTimeStamp@{getTimeStamp}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{getTimeStamp()}{getTimeStamp()}}
+{\footnotesize\ttfamily double get\+Time\+Stamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gives current time stamp 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ts} & time stemp \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{functions_8h_ab01f25e9d4ea3af4aaae53a6524e1229_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a4a4e13c878a42261e5ed3dfc55ead57e}\label{functions_8h_a4a4e13c878a42261e5ed3dfc55ead57e}} 
+\index{functions.h@{functions.h}!initial\_val@{initial\_val}}
+\index{initial\_val@{initial\_val}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{initial\_val()}{initial\_val()}}
+{\footnotesize\ttfamily double initial\+\_\+val (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{k,  }\item[{int}]{l,  }\item[{double}]{h }\end{DoxyParamCaption})}
+
+
+
+x = sin(k$\ast$pi$\ast$x$\ast$h)$\ast$sin(l$\ast$pi$\ast$y$\ast$h) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & vector y \\
+\hline
+\mbox{\texttt{ in}}  & {\em k} & factor k \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & factor l \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & step size\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & vector x \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8h_af65aece55efbd95595403e3aeee25e54}\label{functions_8h_af65aece55efbd95595403e3aeee25e54}} 
+\index{functions.h@{functions.h}!initN@{initN}}
+\index{initN@{initN}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{initN()}{initN()}}
+{\footnotesize\ttfamily int initN (\begin{DoxyParamCaption}\item[{int $\ast$}]{N\+\_\+vec,  }\item[{int $\ast$}]{N\+\_\+pot,  }\item[{int}]{L,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+calculates the grid size for each level L 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em N\+\_\+vec} & array with values of N on each level \\
+\hline
+\mbox{\texttt{ in}}  & {\em N\+\_\+pot} & array with values of N squared on each level \\
+\hline
+\mbox{\texttt{ in}}  & {\em L} & level \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & initial grid size\\
+\hline
+\mbox{\texttt{ out}}  & {\em N\+\_\+vec} & array with values of N on each level \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{functions_8h_af65aece55efbd95595403e3aeee25e54_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_aaf104f06bebf3e0cb4c5012304f6548d}\label{functions_8h_aaf104f06bebf3e0cb4c5012304f6548d}} 
+\index{functions.h@{functions.h}!initXB5@{initXB5}}
+\index{initXB5@{initXB5}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{initXB5()}{initXB5()}}
+{\footnotesize\ttfamily void init\+X\+B5 (\begin{DoxyParamCaption}\item[{double $\ast$}]{x,  }\item[{double $\ast$}]{x\+\_\+sol,  }\item[{double $\ast$}]{b,  }\item[{int}]{N,  }\item[{double}]{h }\end{DoxyParamCaption})}
+
+
+
+initialize starting values, right hand side and the analytical solution for 5-\/point stencil 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vecotr x \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & vector b \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & initial grid size \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & step size\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & starting vector x \\
+\hline
+\mbox{\texttt{ out}}  & {\em x\+\_\+sol} & vector with analytical solution \\
+\hline
+\mbox{\texttt{ out}}  & {\em b} & right hand side \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{functions_8h_aaf104f06bebf3e0cb4c5012304f6548d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{functions_8h_aaf104f06bebf3e0cb4c5012304f6548d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a57077dafef94091f579b7d65e2d467d8}\label{functions_8h_a57077dafef94091f579b7d65e2d467d8}} 
+\index{functions.h@{functions.h}!initXB9@{initXB9}}
+\index{initXB9@{initXB9}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{initXB9()}{initXB9()}}
+{\footnotesize\ttfamily void init\+X\+B9 (\begin{DoxyParamCaption}\item[{double $\ast$}]{x,  }\item[{double $\ast$}]{x\+\_\+sol,  }\item[{double $\ast$}]{b,  }\item[{int}]{N,  }\item[{double}]{h }\end{DoxyParamCaption})}
+
+
+
+initialize starting values, right hand side and the analytical solution for 9-\/point stencil 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vecotr x \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & vector b \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & initial grid size \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & step size\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & starting vector x \\
+\hline
+\mbox{\texttt{ out}}  & {\em x\+\_\+sol} & vector with analytical solution \\
+\hline
+\mbox{\texttt{ out}}  & {\em b} & right hand side \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{functions_8h_a57077dafef94091f579b7d65e2d467d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{functions_8h_a57077dafef94091f579b7d65e2d467d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_af7314a0be1fea6466f56e40001b77b88}\label{functions_8h_af7314a0be1fea6466f56e40001b77b88}} 
+\index{functions.h@{functions.h}!inputs@{inputs}}
+\index{inputs@{inputs}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{inputs()}{inputs()}}
+{\footnotesize\ttfamily int inputs (\begin{DoxyParamCaption}\item[{char $\ast$}]{GL,  }\item[{int}]{stencil,  }\item[{char $\ast$}]{cyc }\end{DoxyParamCaption})}
+
+
+
+checks inputs from main for incorrect parameters 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em GL} & name of chosen smoothing operator \\
+\hline
+\mbox{\texttt{ in}}  & {\em stencil} & chosen stencil \\
+\hline
+\mbox{\texttt{ in}}  & {\em cyc} & chosen cycle procedure\\
+\hline
+\mbox{\texttt{ out}}  & {\em \{0,1\}} & 0 if the inputs are valid, 1 otherwise \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{functions_8h_af7314a0be1fea6466f56e40001b77b88_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a2f8edc4561e9744ed4233b205fa7ec32}\label{functions_8h_a2f8edc4561e9744ed4233b205fa7ec32}} 
+\index{functions.h@{functions.h}!min@{min}}
+\index{min@{min}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily double min (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+calculate the minimum of 2 values 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & value of x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & value of y\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & value of x \\
+\hline
+\mbox{\texttt{ out}}  & {\em y} & value of y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8h_a3080a9370694f7282f3ee1fb350c9fe1}\label{functions_8h_a3080a9370694f7282f3ee1fb350c9fe1}} 
+\index{functions.h@{functions.h}!norm2@{norm2}}
+\index{norm2@{norm2}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{norm2()}{norm2()}}
+{\footnotesize\ttfamily double norm2 (\begin{DoxyParamCaption}\item[{double $\ast$restrict}]{x,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+2-\/norm of a vector x 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & size of the vectors\\
+\hline
+\mbox{\texttt{ out}}  & {\em norm} & norm value \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{functions_8h_a3080a9370694f7282f3ee1fb350c9fe1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a3080a9370694f7282f3ee1fb350c9fe1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_aa1cedc577fcd89781cfd04cc225b8eb7}\label{functions_8h_aa1cedc577fcd89781cfd04cc225b8eb7}} 
+\index{functions.h@{functions.h}!residual@{residual}}
+\index{residual@{residual}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{residual()}{residual()}}
+{\footnotesize\ttfamily void residual (\begin{DoxyParamCaption}\item[{double $\ast$}]{res,  }\item[{double $\ast$}]{x,  }\item[{double $\ast$}]{b,  }\item[{int}]{N,  }\item[{\mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}}}]{mf\+Mult }\end{DoxyParamCaption})}
+
+
+
+calculates residual of Ax-\/b for given matrixfree mat-\/vec multiplication 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em res} & residual \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & vector b \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & vector size \\
+\hline
+\mbox{\texttt{ in}}  & {\em mf\+Mult} & function handle to the 5-\/point or 9-\/point matrixfree mat-\/vec multiiplication\\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & residual \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{functions_8h_aa1cedc577fcd89781cfd04cc225b8eb7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_aa1cedc577fcd89781cfd04cc225b8eb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_afd2d63233a692dbc060217bcd05b2087}\label{functions_8h_afd2d63233a692dbc060217bcd05b2087}} 
+\index{functions.h@{functions.h}!u@{u}}
+\index{u@{u}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{u()}{u()}}
+{\footnotesize\ttfamily double u (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+u = sin(x$\ast$y)$\ast$sin(x$\ast$y) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & vector x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & vector y\\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & vector x \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_afd2d63233a692dbc060217bcd05b2087_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_afb2569f43ba282c49ec37dc69c4be077}\label{functions_8h_afb2569f43ba282c49ec37dc69c4be077}} 
+\index{functions.h@{functions.h}!vec1@{vec1}}
+\index{vec1@{vec1}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{vec1()}{vec1()}}
+{\footnotesize\ttfamily void vec1 (\begin{DoxyParamCaption}\item[{double $\ast$restrict}]{a,  }\item[{double $\ast$restrict}]{b,  }\item[{double $\ast$restrict}]{c,  }\item[{double}]{ska,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+a = b + ska $\ast$ c 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & vector a \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & vector b \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & vector c \\
+\hline
+\mbox{\texttt{ in}}  & {\em ska} & skalar value \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & size of the vectors\\
+\hline
+\mbox{\texttt{ out}}  & {\em a} & vector a \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_afb2569f43ba282c49ec37dc69c4be077_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_ac65eeff05a547f39022de2f560a1ba34}\label{functions_8h_ac65eeff05a547f39022de2f560a1ba34}} 
+\index{functions.h@{functions.h}!vec2@{vec2}}
+\index{vec2@{vec2}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{vec2()}{vec2()}}
+{\footnotesize\ttfamily void vec2 (\begin{DoxyParamCaption}\item[{double $\ast$restrict}]{a,  }\item[{double $\ast$restrict}]{b,  }\item[{double}]{ska,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+a = a + ska $\ast$ b 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & vector a \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & vector b \\
+\hline
+\mbox{\texttt{ in}}  & {\em ska} & skalar value \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & size of the vectors\\
+\hline
+\mbox{\texttt{ out}}  & {\em a} & vector a \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_ac65eeff05a547f39022de2f560a1ba34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a2e62c650b3b0e661bf37b78ee33249cb}\label{functions_8h_a2e62c650b3b0e661bf37b78ee33249cb}} 
+\index{functions.h@{functions.h}!vec3@{vec3}}
+\index{vec3@{vec3}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{vec3()}{vec3()}}
+{\footnotesize\ttfamily void vec3 (\begin{DoxyParamCaption}\item[{double $\ast$restrict}]{a,  }\item[{double}]{ska,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+a = ska $\ast$ a 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & vector a \\
+\hline
+\mbox{\texttt{ in}}  & {\em ska} & skalar value \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & size of the vectors\\
+\hline
+\mbox{\texttt{ out}}  & {\em a} & vector a \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8h_a3463aafa26ecb571158a2f7b9d897a24}\label{functions_8h_a3463aafa26ecb571158a2f7b9d897a24}} 
+\index{functions.h@{functions.h}!zeroes@{zeroes}}
+\index{zeroes@{zeroes}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{zeroes()}{zeroes()}}
+{\footnotesize\ttfamily void zeroes (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+a = 0 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & vector a \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & vector size\\
+\hline
+\mbox{\texttt{ out}}  & {\em a} & vector a \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a3463aafa26ecb571158a2f7b9d897a24_icgraph}
+\end{center}
+\end{figure}

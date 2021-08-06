@@ -1,0 +1,244 @@
+\hypertarget{functionHandles_8h}{}\doxysection{function\+Handles.\+h File Reference}
+\label{functionHandles_8h}\index{functionHandles.h@{functionHandles.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{functionHandles_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{functions_8h_a575a41eb262bae5c9088878d75df500b}{my\+Smoother}} \mbox{\hyperlink{functionHandles_8h_af3d14d00733c73525f4e3076ae219563}{smooth\+Handle}} (char $\ast$GL, double $\ast$w, int stencil)
+\begin{DoxyCompactList}\small\item\em Picks the correct smoothing operator for chosen stencil and initializes the relaxation factor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8h_a09eb608bf20d7cfff2f1d67a035fcdab}{my\+Init\+LU}} \mbox{\hyperlink{functionHandles_8h_ad1d7cd2d49468f9e2c6c6863c865ab84}{init\+L\+U\+Handle}} (int stencil)
+\begin{DoxyCompactList}\small\item\em Picks a function handle to initialize the correct LU decomposition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}} \mbox{\hyperlink{functionHandles_8h_ad512f95026add835cfe6ac99f7f6fbe3}{mult\+Handle}} (int stencil)
+\begin{DoxyCompactList}\small\item\em Picks the correct function handle for, matrix-\/free Mat-\/\+Vector multiplication to a given stencil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8h_aa532412408cc42ff243a8a8db17402ad}{my\+Cycle}} \mbox{\hyperlink{functionHandles_8h_ac9061f8a0fd14f8be1e2339115c53630}{cycle\+Handle}} (char $\ast$cyc)
+\begin{DoxyCompactList}\small\item\em Provides a function handle for either v\+\_\+cycle or w\+\_\+cylce used in the multigrid method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8h_a5e8e21d54aaf91ab30a829c841f15023}{my\+Init\+XB}} \mbox{\hyperlink{functionHandles_8h_a9a1395358a8d908ac70adeea5a0b36ce}{init\+X\+B\+Handle}} (int stencil)
+\begin{DoxyCompactList}\small\item\em Given a stencil picks the correct methode to initialize the right side and initial values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{functionHandles_8h_ac9061f8a0fd14f8be1e2339115c53630}\label{functionHandles_8h_ac9061f8a0fd14f8be1e2339115c53630}} 
+\index{functionHandles.h@{functionHandles.h}!cycleHandle@{cycleHandle}}
+\index{cycleHandle@{cycleHandle}!functionHandles.h@{functionHandles.h}}
+\doxysubsubsection{\texorpdfstring{cycleHandle()}{cycleHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8h_aa532412408cc42ff243a8a8db17402ad}{my\+Cycle}} cycle\+Handle (\begin{DoxyParamCaption}\item[{char $\ast$}]{cyc }\end{DoxyParamCaption})}
+
+
+
+Provides a function handle for either v\+\_\+cycle or w\+\_\+cylce used in the multigrid method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em stencil} & \{\char`\"{}v\char`\"{}, \char`\"{}w\char`\"{}\} v-\/cycle or w-\/cycle available\\
+\hline
+\mbox{\texttt{ out}}  & {\em cycle} & \{\&v\+\_\+cycle\+\_\+rec, \&w\+\_\+cycle\+\_\+rec\} typedef my\+Cycle as described in \mbox{\hyperlink{functions_8h}{functions.\+h}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functionHandles_8h_ac9061f8a0fd14f8be1e2339115c53630_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{functionHandles_8h_ac9061f8a0fd14f8be1e2339115c53630_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functionHandles_8h_ad1d7cd2d49468f9e2c6c6863c865ab84}\label{functionHandles_8h_ad1d7cd2d49468f9e2c6c6863c865ab84}} 
+\index{functionHandles.h@{functionHandles.h}!initLUHandle@{initLUHandle}}
+\index{initLUHandle@{initLUHandle}!functionHandles.h@{functionHandles.h}}
+\doxysubsubsection{\texorpdfstring{initLUHandle()}{initLUHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8h_a09eb608bf20d7cfff2f1d67a035fcdab}{my\+Init\+LU}} init\+L\+U\+Handle (\begin{DoxyParamCaption}\item[{int}]{stencil }\end{DoxyParamCaption})}
+
+
+
+Picks a function handle to initialize the correct LU decomposition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em stencil} & \{5, 9\} accounts for the choice of stencil\\
+\hline
+\mbox{\texttt{ out}}  & {\em init\+LU} & \{\&init\+L\+U5, \&init\+L\+U9\} typdef myinit\+LU as described in \mbox{\hyperlink{functions_8h}{functions.\+h}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{functionHandles_8h_ad1d7cd2d49468f9e2c6c6863c865ab84_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{functionHandles_8h_ad1d7cd2d49468f9e2c6c6863c865ab84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functionHandles_8h_a9a1395358a8d908ac70adeea5a0b36ce}\label{functionHandles_8h_a9a1395358a8d908ac70adeea5a0b36ce}} 
+\index{functionHandles.h@{functionHandles.h}!initXBHandle@{initXBHandle}}
+\index{initXBHandle@{initXBHandle}!functionHandles.h@{functionHandles.h}}
+\doxysubsubsection{\texorpdfstring{initXBHandle()}{initXBHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8h_a5e8e21d54aaf91ab30a829c841f15023}{my\+Init\+XB}} init\+X\+B\+Handle (\begin{DoxyParamCaption}\item[{int}]{stencil }\end{DoxyParamCaption})}
+
+
+
+Given a stencil picks the correct methode to initialize the right side and initial values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em stencil} & \{5, 9\} accounts for the choice of stencil\\
+\hline
+\mbox{\texttt{ out}}  & {\em init\+XB} & \{\&init\+X\+B5, \&init\+X\+B9\} typdef my\+Init\+XB as described in \mbox{\hyperlink{functions_8h}{functions.\+h}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{functionHandles_8h_a9a1395358a8d908ac70adeea5a0b36ce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{functionHandles_8h_a9a1395358a8d908ac70adeea5a0b36ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functionHandles_8h_ad512f95026add835cfe6ac99f7f6fbe3}\label{functionHandles_8h_ad512f95026add835cfe6ac99f7f6fbe3}} 
+\index{functionHandles.h@{functionHandles.h}!multHandle@{multHandle}}
+\index{multHandle@{multHandle}!functionHandles.h@{functionHandles.h}}
+\doxysubsubsection{\texorpdfstring{multHandle()}{multHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8h_aaac0b5b1deae188098f9bcd2f5d4b005}{my\+Mult}} mult\+Handle (\begin{DoxyParamCaption}\item[{int}]{stencil }\end{DoxyParamCaption})}
+
+
+
+Picks the correct function handle for, matrix-\/free Mat-\/\+Vector multiplication to a given stencil. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em stencil} & \{5, 9\} accounts for the choice of stencil\\
+\hline
+\mbox{\texttt{ out}}  & {\em mf\+Mult} & \{\&mf\+Mult5, \&mf\+Mult9\} typdef my\+Mult as described in \mbox{\hyperlink{functions_8h}{functions.\+h}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{functionHandles_8h_ad512f95026add835cfe6ac99f7f6fbe3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{functionHandles_8h_ad512f95026add835cfe6ac99f7f6fbe3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functionHandles_8h_af3d14d00733c73525f4e3076ae219563}\label{functionHandles_8h_af3d14d00733c73525f4e3076ae219563}} 
+\index{functionHandles.h@{functionHandles.h}!smoothHandle@{smoothHandle}}
+\index{smoothHandle@{smoothHandle}!functionHandles.h@{functionHandles.h}}
+\doxysubsubsection{\texorpdfstring{smoothHandle()}{smoothHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8h_a575a41eb262bae5c9088878d75df500b}{my\+Smoother}} smooth\+Handle (\begin{DoxyParamCaption}\item[{char $\ast$}]{GL,  }\item[{double $\ast$}]{w,  }\item[{int}]{stencil }\end{DoxyParamCaption})}
+
+
+
+Picks the correct smoothing operator for chosen stencil and initializes the relaxation factor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em GL} & \{\char`\"{}jac\char`\"{}, \char`\"{}gau\char`\"{}, \char`\"{}sor\char`\"{}\} selects the smoothing operator \\
+\hline
+\mbox{\texttt{ in}}  & {\em w} & initializes the appropriate relaxation factor \\
+\hline
+\mbox{\texttt{ in}}  & {\em stencil} & \{5, 9\} accounts for the choice of stencil\\
+\hline
+\mbox{\texttt{ out}}  & {\em smooth} & \{\&jac, \&gau, \&sor\} typdef my\+Smoother as described in \mbox{\hyperlink{functions_8h}{functions.\+h}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functionHandles_8h_af3d14d00733c73525f4e3076ae219563_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{functionHandles_8h_af3d14d00733c73525f4e3076ae219563_icgraph}
+\end{center}
+\end{figure}

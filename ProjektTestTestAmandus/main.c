@@ -100,6 +100,8 @@ int main (int argc , char **argv)
   if (initN(N_vec, N_pot, L, N) != 0)
     return 1;
 
+    printf("VORM ALLOKIEREN");
+
   // allocate x, b and r
   double **ArrOfx = (double**) malloc (L*sizeof(double*));
   double **ArrOfb = (double**) malloc (L*sizeof(double*));
@@ -111,6 +113,8 @@ int main (int argc , char **argv)
       ArrOfb[i] = (double*) malloc (N_pot[i]*sizeof(double));
       ArrOfr[i] = (double*) malloc (N_pot[i]*sizeof(double));
   }
+
+  printf("NACHM ERSTEN ALLOKIEREN");
 
   // allocate A, L and U
   double **A = (double**) malloc (N_pot[L-1]*sizeof(double*));
@@ -126,6 +130,8 @@ int main (int argc , char **argv)
 
 
   R = getTimeStamp();
+
+  printf("BINNNNNNNNNNNNNNNNNNN DAAAAAAAAAAAAAA");
   // initiate L and U for roughest grid size
   initLU(A, lower, upper, N_vec[L-1], N_pot[L-1]);
 

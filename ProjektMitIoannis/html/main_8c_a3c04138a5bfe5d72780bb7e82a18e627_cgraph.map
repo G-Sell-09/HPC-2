@@ -1,0 +1,36 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Recursive multigrid method with pre&#45; and post&#45;smoothing." alt="" coords="5,335,60,361"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a384ae1c82028e6db525ddf71ce139800" title="calculates the Level L until grid &quot;small enough&quot;" alt="" coords="123,81,211,108"/>
+<area shape="rect" id="node3" href="$functionHandles_8h.html#ac9061f8a0fd14f8be1e2339115c53630" title="Provides a function handle for either v_cycle or w_cylce used in the multigrid method." alt="" coords="116,132,219,159"/>
+<area shape="rect" id="node8" href="$functions_8h.html#ac65eeff05a547f39022de2f560a1ba34" title="a = a + ska * b" alt="" coords="597,360,651,387"/>
+<area shape="rect" id="node12" href="$functions_8h.html#ab01f25e9d4ea3af4aaae53a6524e1229" title="gives current time stamp" alt="" coords="108,233,227,260"/>
+<area shape="rect" id="node13" href="$functionHandles_8h.html#ad1d7cd2d49468f9e2c6c6863c865ab84" title="Picks a function handle to initialize the correct LU decomposition." alt="" coords="114,284,221,311"/>
+<area shape="rect" id="node16" href="$functions_8h.html#af65aece55efbd95595403e3aeee25e54" title="calculates the grid size for each level L" alt="" coords="141,335,194,361"/>
+<area shape="rect" id="node17" href="$functionHandles_8h.html#a9a1395358a8d908ac70adeea5a0b36ce" title="Given a stencil picks the correct methode to initialize the right side and initial values." alt="" coords="114,385,221,412"/>
+<area shape="rect" id="node22" href="$functions_8h.html#af7314a0be1fea6466f56e40001b77b88" title="checks inputs from main for incorrect parameters" alt="" coords="136,436,199,463"/>
+<area shape="rect" id="node23" href="$functionHandles_8h.html#ad512f95026add835cfe6ac99f7f6fbe3" title="Picks the correct function handle for, matrix&#45;free Mat&#45;Vector multiplication to a given stencil." alt="" coords="118,487,217,513"/>
+<area shape="rect" id="node26" href="$functions_8h.html#a3080a9370694f7282f3ee1fb350c9fe1" title="2&#45;norm of a vector x" alt="" coords="592,537,656,564"/>
+<area shape="rect" id="node28" href="$functionHandles_8h.html#af3d14d00733c73525f4e3076ae219563" title="Picks the correct smoothing operator for chosen stencil and initializes the relaxation factor." alt="" coords="275,537,392,564"/>
+<area shape="rect" id="node4" href="$v__cycle_8h.html#ac02ac948524a2ec22da26b88ba062378" title="Performs a recursive multigrid method with pre&#45; and post&#45;smoothing using the v_cycle procedure." alt="" coords="298,132,369,159"/>
+<area shape="rect" id="node11" href="$w__cycle_8h.html#ae8efa72084c255b13011c88046b0904f" title="Performs a recursive multigrid method with pre&#45; and post&#45;smoothing using the w_cycle procedure." alt="" coords="296,81,371,108"/>
+<area shape="rect" id="node5" href="$functions_8h.html#a549642aa73f9a9dc73b9bbddb7098f7f" title="a = b duplication" alt="" coords="583,233,665,260"/>
+<area shape="rect" id="node6" href="$ludecomp_8h.html#a5f9664591deea4acaa4f0193f29305d9" title=" " alt="" coords="440,81,535,108"/>
+<area shape="rect" id="node7" href="$prol_8h.html#ace4e592fa14122fdfcc919577f6062c3" title=" " alt="" coords="464,31,511,57"/>
+<area shape="rect" id="node9" href="$restr_8h.html#a47d0e284c45801b46002f838c54e9343" title=" " alt="" coords="461,132,513,159"/>
+<area shape="rect" id="node10" href="$functions_8h.html#a3463aafa26ecb571158a2f7b9d897a24" title="a = 0" alt="" coords="455,183,520,209"/>
+<area shape="rect" id="node14" href="$alu_8h.html#a49abaf2e2d7aa09cdbd164c27c450659" title="Calculates the 5&#45;point poisson matrix for the roughest grid and its LU&#45;decomposition." alt="" coords="299,284,367,311"/>
+<area shape="rect" id="node15" href="$alu_8h.html#a795c7d4beb5dd7f30e051dd8deae8d9a" title="Calculates the 9&#45;point poisson matrix for the roughest grid and its LU&#45;decomposition." alt="" coords="299,233,367,260"/>
+<area shape="rect" id="node18" href="$functions_8h.html#aaf104f06bebf3e0cb4c5012304f6548d" title="initialize starting values, right hand side and the analytical solution for 5&#45;point stencil" alt="" coords="299,335,368,361"/>
+<area shape="rect" id="node21" href="$functions_8h.html#a57077dafef94091f579b7d65e2d467d8" title="initialize starting values, right hand side and the analytical solution for 9&#45;point stencil" alt="" coords="299,385,368,412"/>
+<area shape="rect" id="node19" href="$functions_8h.html#a5171488338932f60aa0e91441b310bea" title="f = 2*pi²*sin(x*y)*sin(x*y)" alt="" coords="468,335,507,361"/>
+<area shape="rect" id="node20" href="$functions_8h.html#afd2d63233a692dbc060217bcd05b2087" title="u = sin(x*y)*sin(x*y)" alt="" coords="468,385,507,412"/>
+<area shape="rect" id="node24" href="$stencils_8h.html#a57ad5ef936cf43c7843d1955fd862371" title="Matrixfree matrix&#45;vector multiplication with the Poisson Matrix of the 5 point stencil." alt="" coords="295,487,372,513"/>
+<area shape="rect" id="node25" href="$stencils_8h.html#a73f1376081d41083fec1282a41231cb9" title="Matrixfree matrix&#45;vector multiplication with the Poisson Matrix of the 9 point stencil." alt="" coords="295,436,372,463"/>
+<area shape="rect" id="node27" href="$functions_8h.html#a8e8619055360840bbfe74ca2652b625e" title="skalarproduct = a * b" alt="" coords="719,537,761,564"/>
+<area shape="rect" id="node29" href="$jacobi_8h.html#a461627e88b184ed53d167a6523667a4f" title="jacobi smoother for the 5&#45;point stencil" alt="" coords="463,537,512,564"/>
+<area shape="rect" id="node32" href="$jacobi_8h.html#a107ff2199a0bb71965adcbd2fb71d7e7" title="jacobi smoother for the 9&#45;point stencil" alt="" coords="463,588,512,615"/>
+<area shape="rect" id="node33" href="$sor_8h.html#a9a3783c4b1894ab9952f87de6e8477a1" title=" " alt="" coords="462,436,513,463"/>
+<area shape="rect" id="node34" href="$sor_8h.html#abe60e0ab2bfa88f40a27de78306d3f5f" title=" " alt="" coords="462,487,513,513"/>
+<area shape="rect" id="node30" href="$functions_8h.html#aa1cedc577fcd89781cfd04cc225b8eb7" title="calculates residual of Ax&#45;b for given matrixfree mat&#45;vec multiplication" alt="" coords="587,487,661,513"/>
+<area shape="rect" id="node31" href="$functions_8h.html#afb2569f43ba282c49ec37dc69c4be077" title="a = b + ska * c" alt="" coords="713,487,767,513"/>
+</map>

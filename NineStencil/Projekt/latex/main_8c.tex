@@ -1,0 +1,79 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sched.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}alu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stencils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jacobi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}prol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}restr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ludecomp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}v\+\_\+cycle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}w\+\_\+cycle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}function\+Handles.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Recursive multigrid method with pre-\/ and post-\/smoothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Recursive multigrid method with pre-\/ and post-\/smoothing. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em N} & grid size options\+: has to be an uneven number for all levels but the last \\
+\hline
+\mbox{\texttt{ in}}  & {\em L} & multigrid level options\+: 0 gives an optimized value for level, 1 gives a direct solution with LU decomposition and inputs $>$1 set a static level \\
+\hline
+\mbox{\texttt{ in}}  & {\em GL} & smoothing operator options\+: jac, gau or sor \\
+\hline
+\mbox{\texttt{ in}}  & {\em stencil} & stencils options\+: 5 or 9 \\
+\hline
+\mbox{\texttt{ in}}  & {\em cyc} & cycle options\+: v or w\\
+\hline
+\mbox{\texttt{ out}}  & {\em \{0,1\}} & returns 0 if the method finished without errors, 1 otherwise\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin Sell 
+
+Neil Vetter
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+H\+P\+C-\/2 Team R\+S\+NV 
+\end{DoxyCopyright}
+number of pre and post smoothingsHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,5 @@
+<map id="mfMult5" name="mfMult5">
+<area shape="rect" id="node1" title="Matrixfree matrix&#45;vector multiplication with the Poisson Matrix of the 5 point stencil." alt="" coords="255,5,332,32"/>
+<area shape="rect" id="node2" href="$functionHandles_8h.html#ad512f95026add835cfe6ac99f7f6fbe3" title="Picks the correct function handle for, matrix&#45;free Mat&#45;Vector multiplication to a given stencil." alt="" coords="108,5,207,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Recursive multigrid method with pre&#45; and post&#45;smoothing." alt="" coords="5,5,60,32"/>
+</map>

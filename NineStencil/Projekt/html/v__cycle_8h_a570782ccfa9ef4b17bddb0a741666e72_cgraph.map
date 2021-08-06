@@ -1,0 +1,9 @@
+<map id="v_cycle" name="v_cycle">
+<area shape="rect" id="node1" title="Performs a recursive multigrid method with pre&#45; and post&#45;smoothing using the v_cycle procedure." alt="" coords="5,82,76,109"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a549642aa73f9a9dc73b9bbddb7098f7f" title="a = b duplication" alt="" coords="267,6,349,33"/>
+<area shape="rect" id="node3" href="$lu9decompTest_8c.html#a1b2120d230aa2f77ee71a913ba3683f2" title=" " alt="" coords="124,31,219,58"/>
+<area shape="rect" id="node4" href="$prol_8h.html#ace4e592fa14122fdfcc919577f6062c3" title=" " alt="" coords="148,82,195,109"/>
+<area shape="rect" id="node6" href="$restr_8h.html#a47d0e284c45801b46002f838c54e9343" title=" " alt="" coords="145,133,197,159"/>
+<area shape="rect" id="node7" href="$functions_8h.html#a3463aafa26ecb571158a2f7b9d897a24" title="a = 0" alt="" coords="139,183,204,210"/>
+<area shape="rect" id="node5" href="$functions_8h.html#ac65eeff05a547f39022de2f560a1ba34" title="a = a + ska * b" alt="" coords="281,82,335,109"/>
+</map>
